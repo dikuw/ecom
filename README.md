@@ -1,6 +1,6 @@
 Ecommerce Store Example
 
-React
-GraphQL
+- React
+- GraphQL
 
 Source: https://github.com/wesbos/Advanced-React/
