@@ -1,5 +1,9 @@
 # See https://h
 
+# next cache
+
+/.next
+
 # dependencies
 /node_modules
 /.pnp
