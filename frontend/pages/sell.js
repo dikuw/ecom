@@ -1,5 +1,5 @@
 export default function SellPage() {
   return <div>
-    <p>hello</p>
+    <p>sell</p>
   </div>
 }
