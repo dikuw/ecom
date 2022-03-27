@@ -8,5 +8,5 @@ export default function Page({ children }) {
 }
 
 Page.prototypes = {
-  children: PropTypes.arrayOf(PropTypes.node),
+  children: PropTypes.any,
 };

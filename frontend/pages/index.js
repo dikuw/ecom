@@ -1,9 +1,7 @@
-import Page from '../components/Page';
-
 export default function HomePage() {
   return (
-    <Page>
+    <div>
       <p>home</p>
-    </Page>
+    </div>
   )
 }
