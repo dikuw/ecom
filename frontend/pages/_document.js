@@ -8,6 +8,7 @@ export default class doc extends Document {
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
   }
+  
   render() {
     return (
       <Html>
