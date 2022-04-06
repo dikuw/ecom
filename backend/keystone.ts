@@ -1,7 +1,9 @@
 import { createAuth } from '@keystone-next/auth';
 import { config, createSchema } from '@keystone-next/keystone/schema';
+import { withItemData, statelessSessions } from '@keystone-next/keystone/session';
 import 'dotenv/config';
 import { User } from './schemas/User';
+
 
 const databaseURL = process.env.DATABASE_URL;
 
@@ -20,7 +22,7 @@ const { withAuth } = createAuth({
   }
 })
 
-export default config({
+export default withAuth(config({
   server: {
     cors: {
       origin: [process.env.FRONTEND_URL],
@@ -40,5 +42,7 @@ export default config({
     //  TODO: change this for roles
     isAccessAllowed: () => true,
   },
-  //  TODO: add session values here
-})
+  session: withItemData(statelessSessions(sessionConfig), {
+    User: `id`
+  })
+}));
