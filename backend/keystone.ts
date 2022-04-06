@@ -1,3 +1,4 @@
+import { createAuth } from '@keystone-next/auth';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import 'dotenv/config';
 import { User } from './schemas/User';
@@ -8,6 +9,16 @@ const sessionConfig = {
   maxAge: 60 * 60 * 24 * 360,
   secret: process.env.COOKIE_SECRET,
 };
+
+const { withAuth } = createAuth({
+  listKey: 'User',
+  identityField: 'email',
+  secretField: 'password',
+  initFirstItem: {
+    fields: ['name', 'email', 'password'],
+    // TODO: add in initial roles
+  }
+})
 
 export default config({
   server: {
