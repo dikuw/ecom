@@ -40,7 +40,9 @@ export default withAuth(config({
   }),
   ui: {
     //  TODO: change this for roles
-    isAccessAllowed: () => true,
+    isAccessAllowed: ({ session }) => {
+      return session?.data;
+    },
   },
   session: withItemData(statelessSessions(sessionConfig), {
     User: `id`
