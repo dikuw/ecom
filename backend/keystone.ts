@@ -2,6 +2,7 @@ import { createAuth } from '@keystone-next/auth';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import { withItemData, statelessSessions } from '@keystone-next/keystone/session';
 import 'dotenv/config';
+import { Product } from './schemas/Product';
 import { User } from './schemas/User';
 
 
@@ -37,6 +38,7 @@ export default withAuth(config({
   lists: createSchema({
     //  schema items go here
     User,
+    Product,
   }),
   ui: {
     //  TODO: change this for roles
