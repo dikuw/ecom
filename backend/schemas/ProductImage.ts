@@ -6,6 +6,7 @@ export const cloudinary = {
   cloudName: process.env.CLOUDINARY_CLOUD_NAME,
   apiKey: process.env.CLOUDINARY_CLOUD_NAME,
   apiSecret: process.env.CLOUDINARY_CLOUD_NAME,
+  folder: "eCom",
 }
 
 export const ProductImage = list({
