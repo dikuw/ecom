@@ -1,5 +1,11 @@
+import ItemStyles from "./styles/ItemStyles";
+
 export default function Product ({ product }) {
   return (
-    <p>{product.name}</p>
+    <ItemStyles>
+      <img src={product?.photo?.image?.publicUrlTransformed}
+      alt={product.name} />
+      {product.name}
+    </ItemStyles>
   )
 }
