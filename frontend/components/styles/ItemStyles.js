@@ -35,4 +35,4 @@ const ItemStyles = styled.div`
   }
 `;
 
-export default Item;
+export default ItemStyles;
