@@ -40,11 +40,12 @@ export default function Heater() {
         <Logo>
           <Link href="/">Logo</Link>
         </Logo>
+        <Nav />
       </div>
       <div className="sub-bar">
         <p>Search</p>
       </div>
-      <Nav />
+      
     </Header>
   );
 }
