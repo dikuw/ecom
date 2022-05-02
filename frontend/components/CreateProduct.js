@@ -3,7 +3,7 @@ export default function CreateProduct() {
     <form>
       <label htmlFor="name">
         Name
-        <input type="text" id="name" name="name" placeholder="name" />
+        <input type="text" id="name" name="name" placeholder="Name" />
       </label>
     </form>
   )
